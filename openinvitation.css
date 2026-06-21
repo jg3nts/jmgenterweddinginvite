@@ -44,10 +44,10 @@
   position: relative;
   z-index: 1;
 
-  width: min(500px, 90vw); /* increased base size */
+  width: min(500px, 100vw); /* increased base size */
   height: auto;
 
-  transform: scale(1.80); /* increased scale */
+  transform: scale(2); /* increased scale */
 }
 
 /* =========================
