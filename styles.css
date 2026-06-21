@@ -1,4 +1,6 @@
-/* Reset */
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +14,9 @@ body {
   overflow-x: hidden;
 }
 
-/* Main container */
+/* =========================
+   MAIN LAYOUT
+========================= */
 .container {
   position: relative;
   min-height: 100vh;
@@ -23,7 +27,9 @@ body {
   align-items: center;
 }
 
-/* Background video */
+/* =========================
+   BACKGROUND VIDEO
+========================= */
 .video-bg {
   position: fixed;
   top: 0;
@@ -38,7 +44,9 @@ body {
   pointer-events: none;
 }
 
-/* Foreground image */
+/* =========================
+   FOREGROUND IMAGE
+========================= */
 .foreground-image {
   position: relative;
   z-index: 1;
@@ -49,7 +57,9 @@ body {
   transform: scale(1.05);
 }
 
-/* Overlay */
+/* =========================
+   OVERLAY
+========================= */
 .overlay {
   position: absolute;
   inset: 0;
@@ -62,11 +72,15 @@ body {
 
   text-align: center;
 
-  gap: clamp(60px, 12vw, 150px);
+  /* RESPONSIVE SPACING */
+  gap: clamp(40px, 8vw, 140px);
+
   padding: 1rem;
 }
 
-/* Text styles */
+/* =========================
+   TEXT
+========================= */
 .youreinvited,
 .clickhere {
   font-family: "Pinyon Script", cursive;
@@ -76,16 +90,18 @@ body {
 
 /* Main title */
 .youreinvited {
-  font-size: clamp(2rem, 6vw, 4rem);
+  font-size: clamp(3rem, 8vw, 5rem);
   line-height: 1.1;
 }
 
 /* Link text */
 .clickhere {
-  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
-/* Links */
+/* =========================
+   LINKS
+========================= */
 a:link,
 a:visited {
   color: azure;
@@ -96,37 +112,35 @@ a:hover {
   opacity: 0.85;
 }
 
-/* ---------- Large Desktop ---------- */
+/* =========================
+   LARGE DESKTOP
+========================= */
 @media (min-width: 1400px) {
   .foreground-image {
     width: 500px;
   }
 
   .overlay {
-    gap: 200px;
+    gap: 160px;
   }
 }
 
-/* ---------- Tablet ---------- */
+/* =========================
+   TABLET
+========================= */
 @media (max-width: 900px) {
   .foreground-image {
     width: min(400px, 80vw);
   }
 
   .overlay {
-    gap: 175px;
-    
-  }
-   .youreinvited {
-    font-size: clamp(3rem, 8vw, 5rem);
-  }
-
-  .clickhere {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    gap: 100px;
   }
 }
 
-/* ---------- Mobile ---------- */
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 600px) {
   .foreground-image {
     width: 90vw;
@@ -134,23 +148,25 @@ a:hover {
   }
 
   .overlay {
-    gap: 150px;
+    gap: 70px;
     padding: 0.75rem;
   }
 
   .youreinvited {
-    font-size: clamp(3rem, 8vw, 5rem);
+    font-size: 3.5rem;
   }
 
   .clickhere {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: 2rem;
   }
 }
 
-/* ---------- Very Small Phones ---------- */
+/* =========================
+   VERY SMALL PHONES
+========================= */
 @media (max-width: 375px) {
   .overlay {
-    gap: 35px;
+    gap: 45px;
   }
 
   .foreground-image {
