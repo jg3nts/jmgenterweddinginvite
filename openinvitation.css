@@ -47,7 +47,7 @@
   width: min(500px, 90vw); /* increased base size */
   height: auto;
 
-  transform: scale(1.50); /* increased scale */
+  transform: scale(1.40); /* increased scale */
 }
 
 /* =========================
@@ -85,10 +85,10 @@
   white-space: normal;
   overflow-wrap: break-word;
   word-break: break-word;
-
   text-align:center;
   letter-spacing: 1px;
   line-height: 1.6;
+  padding-left: 40%;
 
 }
 
