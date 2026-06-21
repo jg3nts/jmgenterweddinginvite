@@ -7,13 +7,12 @@
   box-sizing: border-box;
 }
 
-/* Prevent horizontal scrolling */
+/* Prevent horizontal scroll */
 html,
 body {
   width: 100%;
   overflow-x: hidden;
 }
-
 
 /* =========================
    MAIN LAYOUT
@@ -21,11 +20,11 @@ body {
 .container {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 /* =========================
@@ -59,7 +58,7 @@ body {
 }
 
 /* =========================
-   OVERLAY
+   OVERLAY (IMPORTANT PART)
 ========================= */
 .overlay {
   position: absolute;
@@ -73,8 +72,8 @@ body {
 
   text-align: center;
 
-  /* RESPONSIVE SPACING */
-  gap: clamp(40px, 8vw, 140px);
+  /* DEFAULT SPACING (desktop) */
+  gap: 120px;
 
   padding: 1rem;
 }
@@ -89,13 +88,11 @@ body {
   color: azure;
 }
 
-/* Main title */
 .youreinvited {
   font-size: clamp(3rem, 8vw, 5rem);
   line-height: 1.1;
 }
 
-/* Link text */
 .clickhere {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
@@ -114,19 +111,6 @@ a:hover {
 }
 
 /* =========================
-   LARGE DESKTOP
-========================= */
-@media (min-width: 1400px) {
-  .foreground-image {
-    width: 500px;
-  }
-
-  .overlay {
-    gap: 160px;
-  }
-}
-
-/* =========================
    TABLET
 ========================= */
 @media (max-width: 900px) {
@@ -135,7 +119,7 @@ a:hover {
   }
 
   .overlay {
-    gap: 110px;
+    gap: 90px;
   }
 }
 
@@ -149,28 +133,25 @@ a:hover {
   }
 
   .overlay {
-    gap: 90px;
-    padding: 0.75rem;
+    gap: 100px; /* BIGGER spacing on mobile */
+    padding: 2rem 1rem;
   }
 
   .youreinvited {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
   }
 
   .clickhere {
-    font-size: 2rem;
-  }
-  body {
-    background: red !important;
+    font-size: 2.2rem;
   }
 }
 
 /* =========================
-   VERY SMALL PHONES
+   SMALL PHONES
 ========================= */
 @media (max-width: 375px) {
   .overlay {
-    gap: 45px;
+    gap: 80px;
   }
 
   .foreground-image {
