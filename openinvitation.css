@@ -47,7 +47,7 @@
   width: min(500px, 90vw); /* increased base size */
   height: auto;
 
-  transform: scale(1.15); /* increased scale */
+  transform: scale(1.30); /* increased scale */
 }
 
 /* =========================
@@ -86,7 +86,7 @@
   overflow-wrap: break-word;
   word-break: break-word;
 
-  text-align:right;
+  text-align:center;
   letter-spacing: 1px;
   line-height: 1.6;
 
@@ -108,7 +108,7 @@ a:visited {
 
   .foreground-image {
     width: 100vw;
-    transform: scale(1.50); /* even bigger on mobile */
+    transform: scale(1.7); /* even bigger on mobile */
   }
 
   .overlay {
@@ -117,7 +117,7 @@ a:visited {
   }
 
   .clickhere {
-    font-size: 22px;
+    font-size: 18px;
     width: 95%;
   }
 }
