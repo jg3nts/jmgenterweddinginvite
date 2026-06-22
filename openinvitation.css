@@ -1,5 +1,5 @@
 /* =========================
-   RESET
+RESET
 ========================= */
 * {
   margin: 0;
@@ -8,7 +8,7 @@
 }
 
 /* =========================
-   PAGE LAYOUT
+PAGE LAYOUT
 ========================= */
 html,
 body {
@@ -27,7 +27,7 @@ body {
 }
 
 /* =========================
-   BACKGROUND VIDEO
+BACKGROUND VIDEO
 ========================= */
 .video-bg {
   position: fixed;
@@ -44,20 +44,20 @@ body {
 }
 
 /* =========================
-   FOREGROUND IMAGE
+FOREGROUND IMAGE (DESKTOP LARGER)
 ========================= */
 .foreground-image {
   position: relative;
   z-index: 1;
 
-  width: min(500px, 90vw);
+  width: min(650px, 95vw);   /* 👈 increased desktop size */
   height: auto;
 
-  transform: scale(1.6);
+  transform: scale(1.8);     /* 👈 increased scale */
 }
 
 /* =========================
-   OVERLAY
+OVERLAY
 ========================= */
 .overlay {
   position: absolute;
@@ -77,7 +77,7 @@ body {
 }
 
 /* =========================
-   CLICK HERE TEXT (WRAPS PROPERLY)
+CLICK HERE TEXT (WRAPPING FIXED)
 ========================= */
 .clickhere {
   font-family: "Pinyon Script", cursive;
@@ -85,7 +85,6 @@ body {
 
   font-size: clamp(18px, 4vw, 28px);
 
-  /* ✅ Proper wrapping */
   width: min(90vw, 600px);
   max-width: 95%;
 
@@ -96,11 +95,10 @@ body {
   text-align: center;
   letter-spacing: 1px;
   line-height: 1.6;
-  padding-left: 20%;
 }
 
 /* =========================
-   LINKS
+LINKS
 ========================= */
 a:link,
 a:visited {
@@ -113,21 +111,21 @@ a:hover {
 }
 
 /* =========================
-   TABLET
+TABLET
 ========================= */
 @media (max-width: 900px) {
   .foreground-image {
-    transform: scale(1.4);
+    transform: scale(1.55); /* slightly bigger than before */
   }
 }
 
 /* =========================
-   MOBILE
+MOBILE (SLIGHTLY BIGGER IMAGE)
 ========================= */
 @media (max-width: 600px) {
   .foreground-image {
     width: 100vw;
-    transform: scale(1.3);
+    transform: scale(1.45); /* 👈 increased mobile size */
   }
 
   .overlay {
@@ -142,11 +140,11 @@ a:hover {
 }
 
 /* =========================
-   SMALL PHONES
+SMALL PHONES
 ========================= */
 @media (max-width: 375px) {
   .foreground-image {
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
 
   .overlay {
