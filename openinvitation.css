@@ -1,159 +1,39 @@
-/* =========================
-RESET
-========================= */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* =========================
-PAGE LAYOUT
-========================= */
-html,
-body {
-  width: 100%;
-  overflow-x: hidden;
+/* Full screen */
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
-.container {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* =========================
-BACKGROUND VIDEO
-========================= */
+/* Background video */
 .video-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100vw;
-  height: 100vh;
-
-  object-fit: cover;
-
-  z-index: -1;
-  pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
-/* =========================
-FOREGROUND IMAGE (DESKTOP LARGER)
-========================= */
-.foreground-image {
-  position: relative;
-  z-index: 1;
-
-  width: min(650px, 95vw);   /* 👈 increased desktop size */
-  height: auto;
-
-  transform: scale(1.8);     /* 👈 increased scale */
-}
-
-/* =========================
-OVERLAY
-========================= */
+/* Center content */
 .overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
+    height: 100vh;
+    width: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  gap: 20px;
-
-  color: azure;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* =========================
-CLICK HERE TEXT (WRAPPING FIXED)
-========================= */
-.clickhere {
-  font-family: "Pinyon Script", cursive;
-  font-weight: 400;
-
-  font-size: clamp(18px, 4vw, 28px);
-
-  width: min(90vw, 600px);
-  max-width: 95%;
-
-  white-space: normal;
-  overflow-wrap: break-word;
-  word-break: normal;
-
-  text-align: center;
-  letter-spacing: 1px;
-  line-height: 1.6;
-  padding-left: 20%;
-}
-
-/* =========================
-LINKS
-========================= */
-a:link,
-a:visited {
-  text-decoration: none;
-  color: azure;
-}
-
-a:hover {
-  opacity: 0.85;
-}
-
-/* =========================
-TABLET
-========================= */
-@media (max-width: 900px) {
-  .foreground-image {
-    transform: scale(1.55); /* slightly bigger than before */
-  }
-}
-
-/* =========================
-MOBILE (SLIGHTLY BIGGER IMAGE)
-========================= */
-@media (max-width: 600px) {
-  .foreground-image {
-    width: 100vw;
-    transform: scale(1.45); /* 👈 increased mobile size */
-  }
-
-  .overlay {
-    gap: 30px;
-    padding: 1rem;
-  }
-
-  .clickhere {
-    font-size: 20px;
-    width: 95vw;
-    padding-left: 20%;
-  }
-}
-
-/* =========================
-SMALL PHONES
-========================= */
-@media (max-width: 375px) {
-  .foreground-image {
-    transform: scale(1.3);
-  }
-
-  .overlay {
-    gap: 25px;
-  }
-
-  .clickhere {
-    font-size: 18px;
-  }
+/* Image */
+.overlay img {
+    max-width: 80vw;
+    max-height: 80vh;
+    display: block;
 }
