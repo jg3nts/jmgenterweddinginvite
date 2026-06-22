@@ -35,7 +35,7 @@ html, body {
     max-width: 80vw;
     max-height: 80vh;
     display: block;
-    transform: scale(1.25);
+    transform: scale(1.5);
 }
 .overlay:hover img {
   opacity: 1
